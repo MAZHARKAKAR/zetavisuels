@@ -16,13 +16,12 @@ body {
     position: fixed; 
     top: 0; 
     width: 100%; 
-    background-color: rgba(1, 10, 19, 0.75); /* Transparent for blur effect */
-    backdrop-filter: blur(15px); /* Blur effect */
-    -webkit-backdrop-filter: blur(15px); /* Safari support */
+    background-color: rgba(1, 10, 19, 0.75); 
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px); 
     z-index: 10;
     border-radius: 15px;
     box-shadow: 0.5px 1px rgba(249, 249, 249, 0.3);
-    opacity: 1;
 } 
 
 .navbar a {
@@ -30,19 +29,16 @@ body {
     text-decoration: none;
 }
 
-
 .logo { 
     padding: 0 5rem; 
-} 
-
-.logo .logo-heading { 
-    color: #fff; 
+    color: white;
 } 
 
 .menu { 
     padding: 0 5rem; 
 } 
 
+/* Default state for smaller screens */
 .hamburger { 
     display: none; 
     color: #fff; 
@@ -62,227 +58,268 @@ body {
     padding: 0.5rem 1rem; 
 } 
 
-@media screen and (min-width: 856px) and (max-width: 1024px) { 
-    .menu-list .menu-list-items { 
-        padding: 0.5rem 0.3rem; 
-    } 
-} 
+/* Profile Container */
+.main-profile-picture {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: 0 10px 1000px #0A1A32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: radial-gradient(circle at center, rgba(144, 238, 144, 0.5), transparent);
+    margin-bottom: 1rem;
+}
 
-/* Profile Container */
-/* Profile Container */
+.main-profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 .profile-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: vh; /* Reduce the height but allow it to expand if necessary */
-    background-color: #010a13; /* Dark background */
-    padding: 2rem; /* Add some padding to the container */
-    border-radius: 15px; /* Optional: Add rounded corners to the container */
-    margin-top: 5rem; /* Add top margin to avoid overlap with navbar */
-  }
-  
-  /* Profile Picture with Brush Effect */
-  .profile-picture {
+    min-height: vh;
+    background-color: #010a13;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 5rem;
+}
+
+.profile-picture {
     position: relative;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    box-shadow: 0 5px 10px rgba(255, 255, 0, 0.3); /* Yellow shadow */
+    box-shadow: 0 10px 1000px #0A1A32;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: radial-gradient(circle at center, rgba(144, 238, 144, 0.5), transparent); /* Light green brush effect */
-    margin-bottom: 1rem; /* Space between the image and the name */
-  }
-  
-  /* Image inside Profile Picture */
-  .profile-picture img {
+    background: radial-gradient(circle at center, #0A1A32, transparent);
+    margin-bottom: 1rem;
+}
+
+.profile-picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%; /* Makes image circular */
-  }
-  
-  /* Profile Details Styling */
-  .profile-details {
+    border-radius: 50%;
+}
+
+.profile-details {
     text-align: center;
-    color: #fff; /* White text */
-    margin-bottom: 2rem; /* Add space at the bottom of the box */
-  }
-  
-  .profile-details h2 {
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.profile-details h2 {
     font-size: 1.5rem;
-    color: #fff; /* White color for name */
+    color: #fff;
     font-weight: bold;
     margin: 0.5rem 0;
-  }
-  
-  .profile-details p {
+}
+
+.profile-details p {
     font-size: 1rem;
-    color: #555; /* Lighter gray for description */
+    color: #555;
     max-width: 300px;
-    margin: 0 auto; /* Center the paragraph */
-    line-height: 1.5; /* Improve readability */
-  }
-  
-  /* Responsive Styling for Larger Screens */
-  @media (min-width: 768px) {
-    .profile-container {
-      width: 80%;
-      padding: 8rem; /* Increase padding on wider screens */
-    }
-  }
-  
-/* Main Hero Section Styles */
-/* About section styles */
+    margin: 0 auto;
+    line-height: 1.5;
 
-/* Portfolio section styles */
+}
 
+/* Portfolio Section */
+.port-card {
+    width: 100%;
+    max-width: 360px;
+    height: 202px;
+    padding: 0;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    box-shadow: 0px 4px 8px #0A1A32;
+}
 
-.port-card { 
-    padding: 0 !important; 
-    background: none !important; 
-    border: 2px solid #ffffff; 
+.port-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.port-card .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 3px solid #ffffff; /* Border only for the image */
+    border-radius: 9px;
+    justify-content: center;
+}
+
+.port-card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+.my-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     margin-left: 3rem;
     margin-right: 3rem;
-} 
-.port-card:hover {
-    transform: scale(1.05); /* Scale up the card when hovered */
-    cursor: pointer; /* Show pointer cursor to indicate it's clickable */
-}
-.port-card .image { 
-    width: 100%; 
-} 
-
-.port-card .image img { 
-    height: 200px; 
-    width: 100%; 
-    border-top-right-radius: 15px; 
-    border-top-left-radius: 15px; 
-    
-} 
-
-.my-row { 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    margin: 1rem;
-    
-} 
-
-.my-row .my-col { 
-    text-align: center; 
-    width: 30%; 
-} 
-
-.my-card { 
-    text-align: center; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    border-radius: 20px; 
-    background-color: #ffffff; 
-    margin: 1rem;
-} 
-/* review section*/
-.reviews-section {
-    padding: 50px 0;
-    background: #292828;
-    overflow: hidden;
 }
 
-.reviews-container {
-    display: flex;
-    animation: slide 20s linear infinite;
+/* Initial State */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+/* Trigger Visibility */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* Disable fade-in on laptops (screen size 1025px and above) */
+@media (min-width: 1025px) {
+    .fade-in {
+        opacity: 1 !important;         /* Make sure it's fully visible */
+        transform: translateY(0) !important; /* No animation */
+        visibility: visible !important; /* Ensure it's visible */
+        transition: none !important;  /* Disable transition effect */
+    }
+}
+
+  
+/* Review Section */
 .review-box {
-    flex: 0 0 300px;
-    background: #010a13;
+    width: 300px;
+    height: auto;
+    background: #1f2937;
     border-radius: 10px;
-    padding: 30px;
-    margin: 0 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    position: relative;
-    min-height: 300px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 5px #0A1A32;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-box:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .review-content {
-    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
     text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
-.review-content h3 {
-    color: #fff5f5;
+.profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px #0A1A32; /* Reduced glow intensity */
+}
+
+.review-name {
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
     margin-bottom: 5px;
 }
 
-.review-content span {
-    color: #fff7f7;
-    font-size: 0.9em;
-    display: block;
-    margin-bottom: 15px;
-}
-
 .review-text {
-    color: #555;
+    color: #757575;
     line-height: 1.6;
     font-size: 0.95em;
+    text-align: center;
 }
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .review-box {
-        flex: 0 0 250px;
-    }
-}
-
-
+/* Initial State */
+.fade-in-effect {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* Trigger Visibility */
+  .fade-in-effect.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }  
+/* Form */
 .form-container {
     background-color: #010a13;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .form-group {
     margin-bottom: 15px;
 }
+
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: white;
 }
+
 input, textarea {
-    width: 80%;
-    padding: 8px;
+    width: 300px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-top: 5px;
 }
+
 button {
-    background-color: #4CAF50;
+    background-color: #A1D647;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    width: 100px;
 }
+
 button:hover {
-    background-color: #45a049;
+    background-color: #A1D647;
 }
+
 #confirmation-message {
     display: none;
     margin-top: 20px;
@@ -290,14 +327,16 @@ button:hover {
     background-color: #dff0d8;
     border: 1px solid #d0e9c6;
     border-radius: 4px;
-    color: #3c763d;
+    color: #A1D647;
+    text-align: center;
 }
 
 /* Footer Styles */
 .footer { 
     background-color: #000; 
     color: #fff; 
-    padding: 2rem; 
+    padding: 5px; 
+
 } 
 
 .footer-list-items { 
@@ -309,6 +348,7 @@ button:hover {
     margin: 1rem 1rem 0 1rem; 
     border-radius: 50%; 
     background-color:#2C3E50; 
+    margin-bottom: 2rem;
 } 
 
 .footer-links { 
@@ -333,16 +373,12 @@ button:hover {
     list-style: none; 
 } 
 
-
-
-
-
-
-/* utility classes */
+/* Utility Classes */
 .greet-heading { 
     font-size: 1.3rem; 
     font-weight: lighter; 
     margin: 0; 
+    margin-top: 3rem;
     letter-spacing: 1px; 
 } 
 
