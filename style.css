@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+
+body { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+    background-color: #010a13;
+} 
+
+/* Header Navbar Styles */
+.navbar { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    background-color: rgba(1, 10, 19, 0.75); 
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px); 
+    z-index: 10;
+    border-radius: 15px;
+    box-shadow: 0.5px 1px rgba(249, 249, 249, 0.3);
+} 
+
+.navbar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+@font-face {
+    font-family: 'Abril Fatface';
+    src: url('fonts/AbrilFatface-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.logo { 
+    padding: 0 5rem; 
+    color: #A1D647;
+    font-family: 'Abril Fatface';
+} 
+
+.menu { 
+    padding: 0 5rem; 
+} 
+
+/* Default state for smaller screens */
+.hamburger { 
+    display: none; 
+    color: #fff; 
+    font-size: 25px; 
+} 
+
+.cross-icon { 
+    display: none; 
+} 
+
+.menu .menu-list { 
+    display: flex; 
+    list-style: none; 
+} 
+
+.menu-list .menu-list-items { 
+    padding: 0.5rem 1rem; 
+} 
+
+/* Profile Container */
+.main-profile-picture {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: 0 10px 1000px #0A1A32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: radial-gradient(circle at center, rgba(144, 238, 144, 0.5), transparent);
+    margin-bottom: 1rem;
+}
+
+.main-profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: vh;
+    background-color: #010a13;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 5rem;
+}
+
+.profile-picture {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 10px 1000px #0A1A32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #0A1A32, transparent);
+    margin-bottom: 1rem;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-details {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.profile-details h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.profile-details p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 300px;
+    margin: 0 auto;
+    line-height: 1.5;
+
+}
+
+
+.swiper {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+.swiper-wrapper {
+    display: flex;
+    width: 200%; /* Make it twice as wide to create a looping effect */
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    width: 12.5%; /* Adjust width based on the number of slides */
+}
+.swiper-slide img {
+    width: 90%;
+    max-width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    margin: 1rem;
+}
+.swiper-slide img:active {
+    transform: scale(1.05);
+}
+
+/* First slider moves left in a loop */
+.mySwiper .swiper-wrapper {
+    animation: moveLeft 10s linear infinite;
+}
+@keyframes moveLeft {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Second slider moves right in a loop */
+.mySwiperReverse .swiper-wrapper {
+    animation: moveRight 10s linear infinite;
+}
+@keyframes moveRight {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@media (max-width: 768px) {
+.swiper-slide img {
+width: 90%;  /* Full width */
+height: 300; /* Keep aspect ratio */
+max-height: 250px; /* Adjust this value for bigger images */
+}
+.swiper-container {
+width: 300px; /* Full container width */
+height: 150px; /* Adjust height */
+}
+.swiper-wrapper {
+    display: flex;
+    width: 550%; /* Make it twice as wide to create a looping effect */
+}
+}
+
+/* Portfolio Section */
+.port-card {
+    width: 100%;
+    max-width: 360px;
+    height: 202px;
+    padding: 0;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    box-shadow: 0px 4px 8px #0A1A32;
+}
+
+.port-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.port-card .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 3px solid #ffffff; /* Border only for the image */
+    border-radius: 9px;
+    justify-content: center;
+}
+
+.port-card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+.my-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+/* Initial State */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Trigger Visibility */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* Disable fade-in on laptops (screen size 1025px and above) */
+@media (min-width: 1025px) {
+    .fade-in {
+        opacity: 1 !important;         /* Make sure it's fully visible */
+        transform: translateY(0) !important; /* No animation */
+        visibility: visible !important; /* Ensure it's visible */
+        transition: none !important;  /* Disable transition effect */
+    }
+}
+
+  
+/* Review Section */
+.review-box {
+    width: 300px;
+    height: auto;
+    background: #1f2937;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 5px #0A1A32;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-box:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.review-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px #0A1A32; /* Reduced glow intensity */
+}
+
+.review-name {
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.review-text {
+    color: #757575;
+    line-height: 1.6;
+    font-size: 0.95em;
+    text-align: center;
+}
+/* Initial State */
+.fade-in-effect {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* Trigger Visibility */
+  .fade-in-effect.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }  
+/* Form */
+.form-container {
+    background-color: #010a13;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+input, textarea {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #A1D647;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+}
+
+button:hover {
+    background-color: #A1D647;
+}
+
+#confirmation-message {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #dff0d8;
+    border: 1px solid #d0e9c6;
+    border-radius: 4px;
+    color: #A1D647;
+    text-align: center;
+}
+
+/* Footer Styles */
+.footer { 
+    background-color: #000; 
+    color: #fff; 
+    padding: 5px; 
+
+} 
+
+.footer-list-items { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 50px; 
+    width: 50px; 
+    margin: 1rem 1rem 0 1rem; 
+    border-radius: 50%; 
+    background-color:#2C3E50; 
+    margin-bottom: 2rem;
+} 
+
+.footer-links { 
+    font-size: 24px; 
+    color: #fff; 
+    text-decoration: none; 
+} 
+
+.social-links { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-right: 2rem;
+} 
+
+.footer-menu { 
+    padding: 0 5rem; 
+} 
+
+.footer-menu .footer-menu-list { 
+    display: flex; 
+    list-style: none; 
+} 
+
+/* Utility Classes */
+.greet-heading { 
+    font-size: 1.3rem; 
+    font-weight: lighter; 
+    margin: 0; 
+    margin-top: 3rem;
+    letter-spacing: 1px; 
+} 
+
+.my-heading { 
+    font-size: 2.5rem; 
+    margin: 0; 
+} 
+
+.sub-heading { 
+    margin: 0; 
+    font-size: 0.8rem; 
+    color: #ccc; 
+    font-weight: lighter; 
+} 
+
+.links:hover { 
+    border-bottom: 2px solid #fff; 
+} 
+
+.links { 
+    border-bottom: 2px solid transparent; 
+    transition: all 0.25s; 
+    padding: 5px; 
+    text-decoration: none; 
+    color: #fff; 
+} 
+
+.btn { 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    letter-spacing: 1px; 
+    border: none; 
+} 
+
+.common-btn { 
+    background-color: #ffffff; 
+    color: #fff; 
+    border: 2px solid #ffffff; 
+    transition: all 0.25s; 
+
+} 
+
+.common-btn:hover { 
+    background-color: #fff; 
+    color: #ffffff; 
+    border: 2px solid #2C3E50; 
+    outline: none; 
+} 
+
+.ghost-btn { 
+    background-color: #fff; 
+    color: #ffffff; 
+    border: 2px solid #ffffff; 
+    outline: none; 
+} 
+
+.ghost-btn:hover { 
+    background-color: #ffffff; 
+    color: #fff; 
+    transition: all 0.25s; 
+    border: 2px solid #ffffff; 
+} 
+
+.heading-span { 
+    font-weight: bolder; 
+} 
+
+.text-center { 
+    text-align: center; 
+} 
+
+.small-para { 
+    font-size: 14px; 
+    color: #fff; 
+} 
+
+.white-text { 
+    color: #fff; 
+} 
+
+.blue-text { 
+    color: #ffffff; 
+}

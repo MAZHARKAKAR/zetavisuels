@@ -1,0 +1,284 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags for charset and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the page -->
+    <title>zetavisuels</title>
+
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Link to external CSS files for styling -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+
+    <!-- Navbar header section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h2 class="logo-heading" >zetavisuels</h2> <!-- Logo Text -->
+            </div>
+            <div class="hamburger" id="hamburger"> <!-- Hamburger menu for mobile -->
+                <i class="fas fa-bars hamburger-icon"></i>
+                <i class="fas fa-times cross-icon"></i>
+            </div>
+            <div class="menu">
+                <ul class="menu-list">
+                    <li class="menu-list-items">
+                        <a class="links" href="#">Home</a>
+                    </li>
+                    <li class="menu-list-items">
+                        <a class="links" href="#portfolio">Projects</a>
+                    </li>
+                    <li class="menu-list-items">
+                        <a class="links" href="#review-content">Testimonials</a>
+                    </li>
+                    <li class="menu-list-items">
+                        <a class="links" href="#Contact-form">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Profile Image Section -->
+    <div class="profile-container">
+        <div class="main-profile-picture">
+            <img src="./images/mazhar.png" alt="Profile Picture"> <!-- Profile Image -->
+        </div>
+        <div class="profile-details">
+            <p>Hello! I am</p>
+            <h2>Mazhar Kakar</h2> <!-- Profile Name -->
+            <p>Graphic Designer | Thumbnail Designer | Creative Visionary</p> <!-- Profile Description -->
+        </div>
+    </div>
+    <h1 style="color: #A1D647;text-align: center;box-shadow: 0.5px 1px rgba(249, 249, 249, 0.3)">ENGAGE</h1>
+    
+    <!-- First Slider (Moves Left) -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            
+            <!-- Duplicated slides for smooth infinite scrolling -->
+            <div class="swiper-slide"><img src="./images/thumbnail1.jpg" alt="Thumbnail 1"></div>
+            <div class="swiper-slide"><img src="./images/thumbnail2.jpg" alt="Thumbnail 2"></div>
+            <div class="swiper-slide"><img src="./images/thumbnail3.jpg" alt="Thumbnail 3"></div>
+            <div class="swiper-slide"><img src="./images/thumbnail4.jpg" alt="Thumbnail 4"></div>
+            <div class="swiper-slide"><img src="./images/thumbnail5.jpg" alt="Thumbnail 5"></div>
+            <div class="swiper-slide"><img src="./images/thumbnail6.jpg" alt="Thumbnail 6"></div>
+            <div class="swiper-slide"><img src="./images/thumbnail7.jpg" alt="Thumbnail 7"></div>
+            <div class="swiper-slide"><img src="./images/thumbnail8.jpg" alt="Thumbnail 8"></div>
+        </div>
+    </div>
+
+    <!-- Second Slider (Moves Right) -->
+     <div class="main_swiper">
+    <div class="swiper mySwiperReverse">
+        <div class="swiper-wrapper">
+            <!-- Duplicated slides for smooth infinite scrolling -->
+            <div class="swiper-slide"><img src="./images/thumbnail7.jpg" alt="Thumbnail 1"></div>
+            <div class="swiper-slide"><img src="./images/thumbnail8.jpg" alt="Thumbnail 2"></div>
+            <div class="swiper-slide"><img src="./images/thumbnail6.jpg" alt="Thumbnail 3"></div>
+            <div class="swiper-slide"><img src="./images/thumbnail4.jpg" alt="Thumbnail 4"></div>
+            <div class="swiper-slide"><img src="./images/thumbnail3.jpg" alt="Thumbnail 5"></div>
+            <div class="swiper-slide"><img src="./images/thumbnail5.jpg" alt="Thumbnail 6"></div>
+            <div class="swiper-slide"><img src="./images/thumbnail2.jpg" alt="Thumbnail 7"></div>
+            <div class="swiper-slide"><img src="./images/thumbnail1.jpg" alt="Thumbnail 8"></div>
+        </div>
+    </div>
+</div>
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-heading">
+            <h1 style="color: #A1D647;text-align: center;box-shadow: 0.5px 1px rgba(249, 249, 249, 0.3);">MY PROJECTS</h1>
+        </div>
+        <div class="portfolio-content">
+            <div class="my-row">
+                <!-- Portfolio Cards with images -->
+                <div class="my-col">
+                    <div class="my-card port-card">   
+                        <div class="image">
+                            <img src="./images/portfolio1.png" alt="Web Design Image">
+                        </div>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        <div class="port-card fade-in">
+                        <div class="image">
+                            <img src="./images/portfolio4.png" alt="Web Development Image">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        <div class="port-card fade-in">
+                        <div class="image">
+                            <img src="./images/portfolio2.png" alt="SEO Image">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-row">
+                <!-- Additional Portfolio Cards -->
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        <div class="port-card fade-in">
+                        <div class="image">
+                            <img src="./images/portfolio5.png" alt="Content Writing Image">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        <div class="port-card fade-in">
+                        <div class="image">
+                            <img src="./images/portfolio6.gif" alt="WordPress Image">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        <div class="port-card fade-in">
+                        <div class="image">
+                            <img src="./images/portfolio3.png" alt="Video Editing Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Reviews Section -->
+    <h1 style="color: #A1D647;text-align: center;box-shadow: 0.5px 1px rgba(249, 249, 249, 0.3); font-family: 'Poppins', sans-serif; font-size: 25px; margin-top: 3rem;">TESTIMONIALS</h1>
+    <div class="review-content" id="review-content">
+        <!-- Individual Review Cards -->
+        <div class="review-content fade-in-effect">
+        <div class="review-box">
+            <img class="profile-picture" src="./images/pic1.png" alt="Client Image">
+            <h3 class="review-name"> John Miller</h3>
+            <span class="review-text">"Absolutely loved the design! It exceeded my expectations and boosted engagement instantly."</span>
+        </div>
+    </div>
+
+        <!-- Additional Review Cards -->
+        <div class="review-content fade-effect">
+        <div class="review-box">
+            <img class="profile-picture" src="./images/pic2.png" alt="Client Image">
+            <h3 class="review-name">Jane Smith</h3>
+            <span class="review-text">"Truly remarkable experience. Highly recommend their work!"</span>
+        </div>
+    </div>
+    <div class="review-content fade-in-effect">
+        <div class="review-box">
+            <img class="profile-picture" src="./images/pic3.png" alt="Client Image">
+            <h3 class="review-name">Jessica Thompson</h3>
+            <span class="review-text">"Incredible work! The designs were eye-catching and professional. Highly recommended!"</span>
+        </div>
+    </div>
+    <div class="review-content fade-in-effect">
+        <div class="review-box">
+            <img class="profile-picture" src="./images/pic4.png" alt="Client Image">
+            <h3 class="review-name">James Lee</h3>
+            <span class="review-text">"Can't thank you enough. My audience engagement has gone through the roof!"</span>
+        </div>
+    </div>
+    <div class="review-content fade-in-effect">
+        <div class="review-box">
+            <img class="profile-picture" src="./images/pic5.png" alt="Client Image">
+            <h3 class="review-name"> David Harris</h3>
+            <span class="review-text">"The thumbnails made my videos pop. I've seen a noticeable increase in clicks!"</span>
+        </div>
+    </div>
+    <div class="review-content fade-in-effect">
+        <div class="review-box">
+            <img class="profile-picture" src="./images/pic6.png" alt="Client Image">
+            <h3 class="review-name">Emily Johnson</h3>
+            <span class="review-text">"Creative and perfectly aligned with my brand. I'll definitely come back for more!"</span>
+        </div>
+    </div>
+    <div class="review-content fade-in-effect">
+        <div class="review-box">
+            <img class="profile-picture" src="./images/pic7.png" alt="Client Image">
+            <h3 class="review-name">Michael Brown</h3>
+            <span class="review-text">"Fast delivery and amazing quality. The designs are truly next-level."</span>
+        </div>
+    </div>
+    <div class="review-content fade-in-effect">
+        <div class="review-box">
+            <img class="profile-picture" src="./images/pic8.png" alt="Client Image">
+            <h3 class="review-name">ebconnect</h3>
+            <span class="review-text">"This designer knows how to grab attention. Best decision I made!"</span>
+        </div>
+    </div>
+        <!-- More reviews can be added here... -->
+    </div>
+
+    <!-- Contact Me Section -->
+    <div class="form-container" id="Contact-form">
+        <h2 style="color: #A1D647;text-align: center; font-family: 'Poppins', sans-serif; font-size: 25px; margin-top: 3rem;">CONTACT ME</h1>
+        <form id="myForm" action="https://formspree.io/f/xpwqrvba" method="POST">
+            <!-- Input Fields for Name, Email, and Message -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write a short message" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+        <div id="confirmation-message">Form submitted successfully! Thank you.</div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content text-center">
+            <h4>
+                Copyright © 2025 All rights reserved |<br>
+                Website design by Mazhar Kakar <br> (zetavisuels)
+            </h4>
+            <div class="social-links">
+                <div class="footer-menu">
+                    <ul class="footer-menu-list">
+                        <!-- Social Media Links -->
+                        <li class="footer-list-items">
+                            <a class="footer-links" href="https://www.instagram.com/zetavisuels?igsh=NGF4bnE0Mm81bWxj">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="footer-list-items">
+                            <a class="footer-links" href="https://www.linkedin.com/in/mazhar-kakar-b50b41324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Imports -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script> <!-- External JavaScript file -->
+</body>
+
+</html>
